@@ -4,20 +4,28 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About — Dor Alagem",
   description:
-    "Computer Science student at HIT. Passionate about software engineering, cloud, DevOps, and AI.",
+    "M.Sc. Computer Science student at The Open University of Israel. Builds AI agents and automation pipelines in Python.",
 };
 
 export default function About() {
   const skills = [
     "Python",
+    "JavaScript",
     "C",
     "SQL",
+    "LLM Agents",
+    "Tool Calling",
+    "RAG",
+    "Context Engineering",
+    "Evals",
+    "Guardrails",
+    "Prompt Engineering",
+    "FastAPI",
+    "Pytest",
+    "GitHub Actions",
+    "Docker",
     "Data Structures",
     "Algorithms",
-    "AI Tools",
-    "GitHub",
-    "Docker",
-    "Prompt Engineering",
     "AWS Lambda",
     "DynamoDB",
     "API Gateway",
@@ -44,10 +52,11 @@ export default function About() {
           <h1 className="text-4xl font-bold text-white">About Me</h1>
           <div className="h-1 w-16 bg-cyan-400 rounded-full mt-3 mb-4 mx-auto sm:mx-0"></div>
           <p className="text-zinc-300">
-            Third-year Computer Science student at HIT, passionate about
-            technology, software engineering, and building things that work.
-            Currently learning CI/CD pipelines and diving deeper into AI tools,
-            cloud, and DevOps.
+            M.Sc. Computer Science student (Machine Learning &amp; Big Data) at
+            The Open University of Israel, with a B.Sc. from HIT. I build AI
+            agents and automation pipelines in Python, keeping the LLM grounded
+            in deterministic, tested code, and I ship them end to end, from
+            data pipeline to live deployment.
           </p>
         </div>
       </div>
@@ -60,8 +69,13 @@ export default function About() {
           <div className="relative flex flex-col gap-6 border-l border-neutral-700 pl-6">
             <div className="relative">
               <div className="absolute -left-[1.65rem] top-1 h-3 w-3 rounded-full bg-gradient-to-b from-cyan-400 to-emerald-400"></div>
+              <p className="text-white font-semibold">M.Sc. Computer Science (Machine Learning &amp; Big Data) — The Open University of Israel</p>
+              <p className="text-zinc-400 text-sm">Oct 2026 – Present</p>
+            </div>
+            <div className="relative">
+              <div className="absolute -left-[1.65rem] top-1 h-3 w-3 rounded-full bg-gradient-to-b from-cyan-400 to-emerald-400"></div>
               <p className="text-white font-semibold">B.Sc. Computer Science — HIT</p>
-              <p className="text-zinc-400 text-sm">2024 – Expected Oct 2026</p>
+              <p className="text-zinc-400 text-sm">2024 – 2026 · GPA 96 · Dean&apos;s List</p>
             </div>
           </div>
         </section>
@@ -87,8 +101,9 @@ export default function About() {
             Currently Learning
           </h2>
           <p className="text-zinc-300">
-            CI/CD pipelines and working deeper with AI tools. Exploring cloud,
-            DevOps, and networking alongside my studies.
+            AI agents and LLM engineering: agent evaluation, context
+            engineering, and tool interoperability, alongside my M.Sc. in
+            machine learning.
           </p>
         </section>
 
@@ -106,8 +121,8 @@ export default function About() {
             Looking For
           </h2>
           <p className="text-zinc-300">
-            A software engineering role with a focus on cloud, DevOps, or
-            networking. Open to internships and collaborations.
+            A role in AI agents and LLM engineering. Open to student positions
+            and internships.
           </p>
         </section>
       </div>

@@ -70,7 +70,7 @@ export default function OGImage() {
 
       {/* tagline */}
       <div style={{ color: "#52525b", fontSize: 28 }}>
-        software engineer · cloud · devops · networks
+        software engineer · ai agents · llms · python
       </div>
     </div>,
     size

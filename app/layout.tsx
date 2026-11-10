@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dor Alagem",
   description:
-    "Computer Science student at HIT, passionate about technology and innovation!",
+    "M.Sc. Computer Science student and software engineer building AI agents and automation pipelines in Python.",
 };
 
 export default function RootLayout({

@@ -12,7 +12,7 @@ export default function SocialLinks({
   return (
     <>
       <a
-        href="https://github.com/DORI2001"
+        href="https://github.com/DoriAlagem"
         target="_blank"
         rel="noopener noreferrer"
         className={`hover:opacity-70 transition-opacity flex items-center justify-center${dimCls}`}
