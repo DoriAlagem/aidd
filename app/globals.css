@@ -1,20 +1,43 @@
 @import "tailwindcss";
 
+/* Engineering-notebook palette (direction A, amber) */
 :root {
-  --background: #0a0a0a;
-  --foreground: #171717;
+  --ink: #0e0f12; /* page ground */
+  --surface: #14161b; /* cards, chat bubbles */
+  --surface-2: #121318; /* quieter cards */
+  --line: #23252b; /* hairline borders */
+  --cream: #ece9e2; /* primary text */
+  --muted: #a8a49a; /* secondary text */
+  --faint: #8a867c; /* labels, captions (AA at small sizes) */
+  --amber: #f5a524; /* the one accent */
+  --amber-ink: #16130a; /* text on amber */
+  --ok: #6fbf8f; /* trace "ok" green */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-cream: var(--cream);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-amber: var(--amber);
+  --color-amber-ink: var(--amber-ink);
+  --color-ok: var(--ok);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-plex-mono);
+  --font-heading: var(--font-grotesk);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--font-body), system-ui, sans-serif;
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--amber-ink);
 }

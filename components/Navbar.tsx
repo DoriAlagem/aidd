@@ -8,32 +8,44 @@ import { NAV_LINKS } from "@/lib/constants";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const links = NAV_LINKS.filter(({ href }) => href !== "/");
 
   const linkClass = (path: string) =>
-    `px-4 py-2 rounded-full transition-colors font-mono text-sm ${
-      pathname === path
-        ? "bg-cyan-400 text-black"
-        : "text-zinc-300 hover:text-black hover:bg-cyan-400"
+    `font-mono text-[13px] transition-colors ${
+      pathname === path ? "text-amber" : "text-muted hover:text-amber"
     }`;
 
   return (
-    <nav className="w-full bg-neutral-900 p-4 sticky top-0 z-50">
-      <div className="flex justify-end items-center">
+    <nav className="w-full sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-line">
+      <div className="max-w-[1160px] mx-auto px-6 py-4 flex flex-wrap items-center gap-x-6 gap-y-3">
+        <Link
+          href="/"
+          className="font-mono text-[15px] font-medium tracking-wide hover:text-amber transition-colors"
+        >
+          dor·alagem
+        </Link>
+
         <button
-          className="md:hidden text-white text-2xl"
+          className="md:hidden ml-auto text-cream text-xl"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
         </button>
-      </div>
-      <div
-        className={`flex flex-col gap-2 mt-2 md:flex-row md:gap-6 md:mt-0 md:flex ${isOpen ? "flex" : "hidden"}`}
-      >
-        {NAV_LINKS.map(({ href, label }) => (
-          <Link key={href} href={href} className={linkClass(href)}>
-            {label}
-          </Link>
-        ))}
+
+        <div
+          className={`${isOpen ? "flex" : "hidden"} md:flex basis-full md:basis-auto md:ml-auto flex-col md:flex-row md:items-center gap-3 md:gap-6`}
+        >
+          {links.map(({ href, label }) => (
+            <Link key={href} href={href} className={linkClass(href)}>
+              {label}
+            </Link>
+          ))}
+          <span className="hidden md:inline-flex items-center gap-2 font-mono text-[11px] text-amber border border-amber/30 rounded-full px-3 py-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />
+            open to opportunities
+          </span>
+        </div>
       </div>
     </nav>
   );

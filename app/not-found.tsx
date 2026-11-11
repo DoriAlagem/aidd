@@ -39,7 +39,7 @@ export default function NotFound() {
 
     if (line.style === "error") {
       return (
-        <p key={i} className="text-white text-lg">
+        <p key={i} className="text-cream text-lg">
           <span className="text-red-400">{text.slice(0, 7)}</span>{text.slice(7)}
         </p>
       );
@@ -47,9 +47,9 @@ export default function NotFound() {
 
     if (line.style === "link") {
       return (
-        <p key={i} className="text-zinc-500 text-sm">
+        <p key={i} className="text-faint text-sm">
           {"did you mean: "}
-          <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+          <Link href="/" className="text-amber hover:brightness-110 transition-all">
             /home
           </Link>
           {" ?"}
@@ -57,7 +57,7 @@ export default function NotFound() {
       );
     }
 
-    return <p key={i} className="text-zinc-500 text-sm">{text}</p>;
+    return <p key={i} className="text-faint text-sm">{text}</p>;
   }
 
   return (
