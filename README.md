@@ -22,8 +22,9 @@ Set these in Vercel (Project → Settings → Environment Variables, for Product
 
 | Variable | Used by | Where to get it |
 |---|---|---|
-| `GOOGLE_GENERATIVE_AI_API_KEY` | the "ask about dor" chat (`app/api/chat/route.ts`) | free key from [Google AI Studio](https://aistudio.google.com/apikey) |
 | `RESEND_API_KEY` | the contact form (`app/actions/sendEmail.ts`) | [Resend](https://resend.com) |
+
+The "ask about dor" chat needs no key: it calls the Vercel AI Gateway, which authenticates with the deployment's OIDC token. It uses a zero-priced model (`nvidia/nemotron-3.5-lightning-free`) because the gateway's free tier rejects paid models.
 
 ## Live Site
 
