@@ -1,14 +1,13 @@
 import { streamText, convertToModelMessages } from "ai";
 import { buildSystemPrompt } from "@/lib/system-prompt";
+import { MAX_CHAT_MESSAGES } from "@/lib/constants";
 
 export const runtime = "nodejs";
-
-const MAX_MESSAGES = 14;
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
 
-  if (messages.length > MAX_MESSAGES) {
+  if (messages.length > MAX_CHAT_MESSAGES) {
     return new Response("Too many messages", { status: 400 });
   }
 
