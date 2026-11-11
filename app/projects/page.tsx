@@ -3,33 +3,45 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Projects — Dor Alagem",
   description:
-    "Selected projects by Dor Alagem — IoT, path planning, full-stack web development, and more.",
+    "Selected projects by Dor Alagem — AI agents, LLM automation, cloud, IoT, full-stack web development, and more.",
 };
 
 const projects = [
   {
+    name: "Airport Investment Agent",
+    description:
+      "Tool-calling AI agent that ranks 396 US airports by suppressed demand for investors. A ReAct-style loop over six tools, grounded in a deterministic scoring engine so the LLM never produces a figure. Includes an eval harness that traces every number back to a tool result, an ETL pipeline over federal aviation data, English/Hebrew voice, and 102 tests in CI. Python, FastAPI, Gemini.",
+    link: "https://github.com/DoriAlagem/airport-investment-agent",
+  },
+  {
+    name: "AI-Powered Job Scanner",
+    description:
+      "Autonomous LLM pipeline that scrapes six job sources twice daily, scores each listing against a CV with structured JSON output, and emails a ranked digest. Has screened 11,000+ listings unattended; batched scoring cuts LLM calls 5x. 62 tests, runs serverless on GitHub Actions.",
+    link: "https://github.com/DoriAlagem/job-scanner",
+  },
+  {
     name: "Smart Irrigation System",
     description:
       "IoT course final project. Monitors soil moisture via MQTT and triggers irrigation alerts automatically. Built a live Streamlit dashboard to track moisture history in real time.",
-    link: "https://github.com/DORI2001/IOT_SMART_HOME",
+    link: "https://github.com/DoriAlagem/IOT_SMART_HOME",
   },
   {
     name: "A* Path Planning Visualizer",
     description:
       "Implements the A* algorithm for robot navigation through obstacle-filled environments. Includes an interactive GUI where you can place start/goal points and watch the algorithm explore in real time.",
-    link: "https://github.com/DORI2001/AV-course",
+    link: "https://github.com/DoriAlagem/AV-course",
   },
   {
     name: "Pollarsteps",
     description:
       "Full-stack travel tracking app. Add locations on an interactive map, attach photos, get AI-powered recommendations, and share trips with friends. Built with Next.js, FastAPI, Docker, and JWT auth.",
-    link: "https://github.com/DORI2001/pollarsteps",
+    link: "https://github.com/DoriAlagem/Pollarsteps",
   },
   {
     name: "MailNet",
     description:
       "Serverless mailing list platform on AWS. Users subscribe to groups and admins broadcast emails through an event-driven pipeline: API Gateway → Lambda → DynamoDB & SQS → SES. Deployed with AWS SAM.",
-    link: "https://github.com/DORI2001/AWS-Project",
+    link: "https://github.com/DoriAlagem/AWS-Project",
   },
   {
     name: "Expense Tracker API",
@@ -41,7 +53,7 @@ const projects = [
     name: "This Portfolio",
     description:
       "Built from scratch with Next.js 16 and Tailwind CSS v4. My first web dev project — designed and coded while learning the fundamentals.",
-    link: "https://github.com/DORI2001/aidd",
+    link: "https://github.com/DoriAlagem/aidd",
   },
 ];
 

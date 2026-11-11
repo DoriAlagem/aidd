@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useChat } from "@ai-sdk/react";
+import { MAX_CHAT_MESSAGES } from "@/lib/constants";
 import { DefaultChatTransport } from "ai";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 
@@ -42,7 +43,7 @@ export default function Chat({
       <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3">
         {messages.length === 0 && (
           <p className="text-zinc-500 font-mono text-xs text-center mt-4">
-            ask me anything about dor's background, projects, or experience
+            ask me anything about dor&apos;s background, projects, or experience
           </p>
         )}
         {messages.map((msg) => (
@@ -72,10 +73,10 @@ export default function Chat({
             </div>
           </div>
         ))}
-        {messages.length >= 14 && (
+        {messages.length >= MAX_CHAT_MESSAGES && (
           <div className="flex justify-start">
             <div className="bg-neutral-800 text-zinc-200 rounded-2xl px-4 py-2 max-w-[85%] text-sm">
-              We've reached the chat limit! Feel free to refresh to start a new conversation 😊
+              We&apos;ve reached the chat limit! Feel free to refresh to start a new conversation 😊
             </div>
           </div>
         )}

@@ -16,6 +16,16 @@ My personal portfolio site, built from scratch as my first web development proje
 - **Projects** — selected work with GitHub links
 - **Contact** — social links and contact form
 
+## Environment Variables
+
+Set these in Vercel (Project → Settings → Environment Variables, for Production and Preview):
+
+| Variable | Used by | Where to get it |
+|---|---|---|
+| `RESEND_API_KEY` | the contact form (`app/actions/sendEmail.ts`) | [Resend](https://resend.com) |
+
+The "ask about dor" chat needs no key: it calls the Vercel AI Gateway, which authenticates with the deployment's OIDC token. It uses a zero-priced model (`nvidia/nemotron-3.5-lightning-free`) because the gateway's free tier rejects paid models.
+
 ## Live Site
 
 [dor-alagem.com](https://dor-alagem.com)
