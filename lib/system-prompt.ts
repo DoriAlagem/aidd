@@ -7,9 +7,12 @@ export function buildSystemPrompt(): string {
   sections.push(
     "Be helpful, concise, and accurate. Format your responses using Markdown."
   );
+  sections.push(
+    "Answer in the language the visitor writes in. In Hebrew, always write his name exactly as דור אלג׳ם (never transliterate \"Alagem\" yourself); in English, write Dor Alagem."
+  );
 
   sections.push(`## Personal Info
-Name: Dor Alagem
+Name: Dor Alagem (in Hebrew: דור אלג׳ם)
 Currently: M.Sc. Computer Science student (Machine Learning & Big Data) at The Open University of Israel (Oct 2026 – present)
 Previously: B.Sc. Computer Science at HIT – Holon Institute of Technology (2024 – 2026)
 Location: Israel`);
