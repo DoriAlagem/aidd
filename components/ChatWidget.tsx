@@ -28,7 +28,7 @@ export function ChatWidget() {
           role="dialog"
           aria-modal="true"
           aria-label="Chat with Dor"
-          className="w-[380px] h-[520px] flex flex-col rounded-2xl border border-neutral-700 bg-neutral-900 shadow-xl shadow-black/50 overflow-hidden"
+          className="w-[380px] h-[520px] flex flex-col rounded-2xl border border-line bg-ink shadow-xl shadow-black/50 overflow-hidden"
         >
           <Chat inputRef={setInputEl} />
         </div>
@@ -36,7 +36,7 @@ export function ChatWidget() {
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? "Close chat" : "Open chat"}
-        className="w-12 h-12 rounded-full bg-cyan-400 text-black flex items-center justify-center text-xl hover:bg-cyan-300 hover:scale-105 transition-all shadow-lg"
+        className="w-12 h-12 rounded-full bg-amber text-amber-ink flex items-center justify-center text-xl hover:brightness-110 hover:scale-105 transition-all shadow-lg"
       >
         {isOpen ? "✕" : "💬"}
       </button>

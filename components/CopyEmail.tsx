@@ -33,7 +33,7 @@ export default function CopyEmail({ size = 32, dim = false }: { size?: number; d
         />
       </button>
       {copied && (
-        <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-neutral-700 text-white text-xs font-mono px-2 py-1 rounded whitespace-nowrap">
+        <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-surface border border-line text-cream text-xs font-mono px-2 py-1 rounded whitespace-nowrap">
           copied!
         </span>
       )}

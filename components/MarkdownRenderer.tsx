@@ -23,18 +23,18 @@ export default function MarkdownRenderer({ content }: { content: string }) {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cyan-400 hover:text-cyan-300 underline"
+            className="text-amber hover:brightness-110 underline"
           >
             {children}
           </a>
         ),
         code: ({ children }) => (
-          <code className="bg-neutral-700 px-1 rounded text-xs font-mono">
+          <code className="bg-surface-2 border border-line px-1 rounded text-xs font-mono">
             {children}
           </code>
         ),
         pre: ({ children }) => (
-          <pre className="bg-neutral-800 rounded p-3 text-xs font-mono overflow-x-auto mb-2">
+          <pre className="bg-surface-2 border border-line rounded p-3 text-xs font-mono overflow-x-auto mb-2">
             {children}
           </pre>
         ),

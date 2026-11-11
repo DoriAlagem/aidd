@@ -8,7 +8,7 @@ export default function OGImage() {
   return new ImageResponse(
     <div
       style={{
-        background: "#0a0a0a",
+        background: "#0E0F12",
         width: "100%",
         height: "100%",
         display: "flex",
@@ -19,7 +19,7 @@ export default function OGImage() {
         position: "relative",
       }}
     >
-      {/* cyan glow top left */}
+      {/* amber glow */}
       <div
         style={{
           position: "absolute",
@@ -28,14 +28,14 @@ export default function OGImage() {
           width: 400,
           height: 400,
           background:
-            "radial-gradient(circle, rgba(6,182,212,0.15) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(245,165,36,0.12) 0%, transparent 70%)",
         }}
       />
 
       {/* top label */}
       <div
         style={{
-          color: "#22d3ee",
+          color: "#F5A524",
           fontSize: 20,
           marginBottom: 32,
           letterSpacing: 4,
@@ -57,19 +57,19 @@ export default function OGImage() {
         Dor Alagem
       </div>
 
-      {/* cyan accent line */}
+      {/* amber accent line */}
       <div
         style={{
           width: 80,
           height: 4,
-          background: "#22d3ee",
+          background: "#F5A524",
           borderRadius: 999,
           marginBottom: 32,
         }}
       />
 
       {/* tagline */}
-      <div style={{ color: "#52525b", fontSize: 28 }}>
+      <div style={{ color: "#A8A49A", fontSize: 28 }}>
         software engineer · ai agents · llms · python
       </div>
     </div>,

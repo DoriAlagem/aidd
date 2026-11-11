@@ -6,7 +6,7 @@ import CopyEmail from "@/components/CopyEmail";
 import SocialLinks from "@/components/SocialLinks";
 
 const inputClass =
-  "bg-neutral-800 text-white rounded-lg p-3 font-mono text-sm outline-none focus:ring-2 focus:ring-cyan-400";
+  "bg-surface border border-line text-cream rounded-lg p-3 font-mono text-sm outline-none focus:border-amber";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -29,10 +29,9 @@ export default function Contact() {
 
   return (
     <div className="flex-1 min-h-screen flex flex-col items-center justify-center p-8 relative">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(6,182,212,0.1)_0%,_transparent_60%)] pointer-events-none"></div>
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-white">Contact</h1>
-        <div className="h-1 w-16 bg-cyan-400 rounded-full mt-3 mx-auto"></div>
+        <p className="font-mono text-[13px] tracking-[0.14em] text-faint mb-2">SAY HI</p>
+        <h1 className="font-heading font-bold text-4xl tracking-tight">Contact</h1>
       </div>
       <div className="flex gap-6 mb-8">
         <CopyEmail size={32} />
@@ -45,12 +44,12 @@ export default function Contact() {
         <button
           type="submit"
           disabled={status === "sending" || cooldown > 0}
-          className="bg-cyan-400 text-black font-mono font-semibold px-6 py-3 rounded-full hover:bg-cyan-300 transition-colors disabled:opacity-50"
+          className="bg-amber text-amber-ink font-mono font-semibold px-6 py-3 rounded-lg hover:brightness-110 transition-all disabled:opacity-50"
         >
           {status === "sending" ? "sending..." : cooldown > 0 ? `wait ${cooldown}s` : "send →"}
         </button>
         {status === "success" && (
-          <p className="text-emerald-400 font-mono text-sm text-center">message sent!</p>
+          <p className="text-ok font-mono text-sm text-center">message sent!</p>
         )}
         {status === "error" && (
           <p className="text-red-400 font-mono text-sm text-center">something went wrong. try again.</p>

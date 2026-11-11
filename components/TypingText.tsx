@@ -17,9 +17,9 @@ export default function TypingText({ text }: { text: string }) {
   }, [text]);
 
   return (
-    <span className="text-zinc-500 font-mono text-sm tracking-widest">
+    <span className="text-faint font-mono text-[13px] tracking-[0.14em] uppercase">
       {displayed}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse text-amber">_</span>
     </span>
   );
 }

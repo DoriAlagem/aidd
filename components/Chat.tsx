@@ -27,22 +27,22 @@ export default function Chat({
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
-    if (messages.length >= 14) return;
+    if (messages.length >= MAX_CHAT_MESSAGES) return;
     sendMessage({ role: "user", parts: [{ type: "text", text: input }] });
     setInput("");
   }
 
   return (
     <div className="flex flex-col h-full">
-      <div className="px-4 py-3 border-b border-neutral-700">
-        <p className="text-cyan-400 font-mono text-sm font-semibold">
+      <div className="px-4 py-3 border-b border-line">
+        <p className="text-amber font-mono text-sm font-semibold">
           ask about dor
         </p>
       </div>
 
       <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3">
         {messages.length === 0 && (
-          <p className="text-zinc-500 font-mono text-xs text-center mt-4">
+          <p className="text-faint font-mono text-xs text-center mt-4">
             ask me anything about dor&apos;s background, projects, or experience
           </p>
         )}
@@ -54,8 +54,8 @@ export default function Chat({
             <div
               className={`rounded-2xl px-4 py-2 max-w-[85%] text-sm ${
                 msg.role === "user"
-                  ? "bg-cyan-400 text-black font-mono"
-                  : "bg-neutral-800 text-zinc-200"
+                  ? "bg-amber text-amber-ink font-mono"
+                  : "bg-surface border border-line text-cream"
               }`}
             >
               {msg.role === "user" ? (
@@ -75,17 +75,17 @@ export default function Chat({
         ))}
         {messages.length >= MAX_CHAT_MESSAGES && (
           <div className="flex justify-start">
-            <div className="bg-neutral-800 text-zinc-200 rounded-2xl px-4 py-2 max-w-[85%] text-sm">
+            <div className="bg-surface border border-line text-cream rounded-2xl px-4 py-2 max-w-[85%] text-sm">
               We&apos;ve reached the chat limit! Feel free to refresh to start a new conversation 😊
             </div>
           </div>
         )}
         {isLoading && (
           <div className="flex justify-start">
-            <div className="bg-neutral-800 rounded-2xl px-4 py-3 flex gap-1">
-              <span className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce [animation-delay:0ms]" />
-              <span className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce [animation-delay:150ms]" />
-              <span className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce [animation-delay:300ms]" />
+            <div className="bg-surface border border-line rounded-2xl px-4 py-3 flex gap-1">
+              <span className="w-2 h-2 bg-faint rounded-full animate-bounce [animation-delay:0ms]" />
+              <span className="w-2 h-2 bg-faint rounded-full animate-bounce [animation-delay:150ms]" />
+              <span className="w-2 h-2 bg-faint rounded-full animate-bounce [animation-delay:300ms]" />
             </div>
           </div>
         )}
@@ -99,7 +99,7 @@ export default function Chat({
 
       <form
         onSubmit={handleSubmit}
-        className="p-3 border-t border-neutral-700 flex gap-2"
+        className="p-3 border-t border-line flex gap-2"
       >
         <div className="flex-1 relative">
           <input
@@ -110,11 +110,11 @@ export default function Chat({
             maxLength={100}
             placeholder="ask a question..."
             aria-label="Chat input"
-            className="w-full bg-neutral-800 text-white rounded-full px-4 py-2 text-sm font-mono outline-none focus:ring-2 focus:ring-cyan-400"
+            className="w-full bg-surface-2 border border-line text-cream rounded-full px-4 py-2 text-sm font-mono outline-none focus:border-amber"
           />
           {input.length > 70 && (
             <span
-              className={`absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono ${input.length > 90 ? "text-red-400" : "text-zinc-400"}`}
+              className={`absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono ${input.length > 90 ? "text-red-400" : "text-faint"}`}
             >
               {100 - input.length}
             </span>
@@ -123,7 +123,7 @@ export default function Chat({
         <button
           type="submit"
           disabled={!input.trim() || isLoading}
-          className="bg-cyan-400 text-black font-mono text-sm px-4 py-2 rounded-full hover:bg-cyan-300 transition-colors disabled:opacity-40"
+          className="bg-amber text-amber-ink font-mono text-sm px-4 py-2 rounded-full hover:brightness-110 transition-all disabled:opacity-40"
         >
           →
         </button>
