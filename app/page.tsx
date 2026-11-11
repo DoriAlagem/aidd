@@ -68,10 +68,10 @@ export default function Home() {
               <span className="text-amber">tool ›</span> resolve_airports(&quot;New England&quot;)
             </div>
             <div>
-              <span className="text-amber">tool ›</span> score_airport(&quot;BOS&quot;) · score_airport(&quot;PVD&quot;)
+              <span className="text-amber">tool ›</span> score_airport(&quot;BOS&quot;) · score_airport(&quot;PWM&quot;) · score_airport(&quot;MHT&quot;)
             </div>
             <div>
-              <span className="text-ok">ok&nbsp;&nbsp; ›</span> BOS 79.6 — runway-limited, p94 tier
+              <span className="text-ok">ok&nbsp;&nbsp; ›</span> BOS 79.6 — terminal-limited, high confidence
             </div>
             <div>
               <span className="text-faint">agent›</span> Boston Logan leads; every figure traced.
