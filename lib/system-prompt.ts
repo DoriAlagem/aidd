@@ -19,7 +19,7 @@ Location: Israel`);
 
   sections.push(`## Skills
 Languages: Python, JavaScript, C, SQL
-Agentic AI: LLM agents, tool calling, RAG, context engineering, evals, guardrails, prompt engineering
+Agentic AI: AI agents, tool calling, RAG, context engineering, evals, guardrails, prompt engineering
 LLMs & AI tools: Google ADK, Gemini, Groq, OpenAI APIs, Whisper, Claude Code
 Testing & automation: Pytest, Playwright, Postman, GitHub Actions (CI/CD)
 Backend, data & cloud: FastAPI, Node.js, REST APIs, microservices, SQLite, DuckDB, MongoDB, MySQL, Docker, AWS (Lambda, DynamoDB, API Gateway, SQS, SES, SAM, CloudFormation), Render`);
