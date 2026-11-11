@@ -13,7 +13,7 @@ export default function About() {
     "JavaScript",
     "C",
     "SQL",
-    "LLM Agents",
+    "AI Agents",
     "Tool Calling",
     "RAG",
     "Context Engineering",
