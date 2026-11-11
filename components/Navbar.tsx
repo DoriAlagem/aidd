@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-line">
-      <div className="max-w-[1160px] mx-auto px-6 py-4 flex flex-wrap items-center gap-x-6 gap-y-3">
+      <div className="max-w-[1160px] mx-auto px-4 md:px-6 py-4 flex flex-wrap items-center gap-x-3 md:gap-x-6 gap-y-3">
         <Link
           href="/"
           className="font-mono text-[15px] font-medium tracking-wide hover:text-amber transition-colors"
@@ -25,8 +25,13 @@ export default function Navbar() {
           dor·alagem
         </Link>
 
+        <span className="ml-auto md:ml-0 md:order-last inline-flex items-center gap-2 font-mono text-[11px] text-amber border border-amber/30 rounded-full px-2.5 md:px-3 py-1.5 whitespace-nowrap">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />
+          open to opportunities
+        </span>
+
         <button
-          className="md:hidden ml-auto text-cream text-xl"
+          className="md:hidden text-cream text-xl"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -41,10 +46,6 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <span className="hidden md:inline-flex items-center gap-2 font-mono text-[11px] text-amber border border-amber/30 rounded-full px-3 py-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />
-            open to opportunities
-          </span>
         </div>
       </div>
     </nav>
